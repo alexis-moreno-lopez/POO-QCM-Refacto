@@ -5,7 +5,7 @@ include_once("./Question.php"); // j'inculue le fichier Question.php pour les re
 
 class Answer {      //je crée ma classe
 
-    const BONNE_REPONSE = true;    // je crée une constante qui ne chage jamais (bonne réponse et je luis donne la valeur "vrai")
+    const BONNE_REPONSE = true;    // je crée une constante qui ne change jamais (bonne réponse et je lui donne la valeur "vrai")
 
     private $text;  
     private $correct;
@@ -15,7 +15,7 @@ public function __construct($text, $correct = false) {
 // je crée une méthode construct avec les paramétres $text, $correct en lui donnant pour valeur par défaut "false"
 //ce qui signifie que si ce paramètre n'est pas fourni lors de la création de l'objet, la réponse sera par défaut considérée comme incorrecte.
 
-$this->text = $text; //traduction / Answer = (Reponse) la variable text devient text
+$this->text = $text; //traduction / Answer = (Reponse) la variable text devient $text
 $this->correct = $correct; //traduction / Answer = (Reponse) la variable correct devient correct
 
 }
@@ -27,24 +27,5 @@ public function isCorrect() { // je crée une méthode qui dit que la réponse e
 }
 }
 
-// class Answer {
-//     const BONNE_REPONSE = true;
-    
-//     private $text;
-//     private $correct;
-
-//     public function __construct($text, $correct = false) {
-//         $this->text = $text;
-//         $this->correct = $correct;
-//     }
-
-//     public function getText() {
-//         return $this->text;
-//     }
-
-//     public function isCorrect() {
-//         return $this->correct;
-//     }
-// }
 
 ?>
