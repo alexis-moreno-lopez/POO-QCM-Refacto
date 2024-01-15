@@ -1,6 +1,4 @@
 <?php
-include_once("./Qcm.php");
-include_once("./Answer.php");
 
 class Question { // je crée une classe Question
     private $questionText; // je crée des proppriéter que peut comporter ma classe question comme le text de ma question

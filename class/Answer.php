@@ -1,8 +1,4 @@
 <?php
-include_once("./Qcm.php"); // j'inculue le fichier QCM pour les relié
-include_once("./Question.php"); // j'inculue le fichier Question.php pour les relié
-
-
 class Answer {      //je crée ma classe
 
     const BONNE_REPONSE = true;    // je crée une constante qui ne change jamais (bonne réponse et je lui donne la valeur "vrai")
