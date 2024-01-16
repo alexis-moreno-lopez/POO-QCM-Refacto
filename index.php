@@ -14,6 +14,8 @@ include_once("./class/Answer.php");
 // $qcm->addQuestion($question1); // j'appel ma question
 // $qcm->generate(); // et j'appel le générateur qui permet de générer tt le quizz
 // $Qcm = new Qcm($db);
+// $db = new PDO();
 $Qcm = new Qcm($db);
 $Qcm ->getQuestion();
+// $qcm->generate();
 ?>

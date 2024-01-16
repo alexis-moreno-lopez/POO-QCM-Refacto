@@ -21,6 +21,7 @@ public function getText() { //je crée une méthode et j'utilise (get) get est u
 public function isCorrect() { // je crée une méthode qui dit que la réponse est correct
     return $this->correct; // cette instruction renvoie la valeur actuelle de la propriété "correct" de l'objet en cours
 }
+
 }
 
 

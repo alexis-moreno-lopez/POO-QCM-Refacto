@@ -1,6 +1,7 @@
 <?php
 
 class Question { // je crée une classe Question
+    private $id;
     private $questionText; // je crée des proppriéter que peut comporter ma classe question comme le text de ma question
     private $answers = []; // ma classe question comporte des réponses dans un tableaux
     private $explications; // ma classe question comporte des explications

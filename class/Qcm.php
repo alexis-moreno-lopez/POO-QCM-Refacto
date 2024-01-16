@@ -4,15 +4,11 @@ class Qcm { // je crée ma classe
     private $questions = []; // dans mon QCM j'ai un tableau de question
     private $db;
 
+
     public function __construct($db){
        $this->db = $db;
     }
-    public function getQuestion(){
-        $request = $this->db->query("SELECT question FROM question");
-        $allQuestions = $request->fetchAll();
-        var_dump($allQuestions);
-        return $allQuestions;
-    }
+
     public function addQuestion(question $question) { // je crée une méthode ou j'ajoute des question dans mon tableau
         $this->questions[] = $question; // dans le tableau du QCM je viens donner la valeurs $question à toute les question du tableau pour les rappeler plus tard
     }
@@ -30,6 +26,30 @@ class Qcm { // je crée ma classe
             echo "<br>"; // passage à la ligne
         }
         echo "Eplication: " . $question->getExplications() . "<br><br>";} // suite à la réponse je echo une explications associé
+    }
+    
+    public function getQuestion(){
+        $request = $this->db->query("SELECT question FROM question");
+        $allQuestions = $request->fetchAll();
+        var_dump($allQuestions);
+        return $allQuestions;
+    }
+    
+    private function hydrate(array $request) {
+foreach ($request as $question) {
+    $newQuestion = new Question($question);
+    $this->questions[] = $newQuestion;
+
+    foreach ($request as $answer) {
+        $newAnswer = new Answer($answer);
+        $this->answer = $newAnswer;
+}
+
+    }
+}
+    public function getAnswer() {
+        $request = $this->db->query("SELECT answer FROM answer");
+        $allAnswer = $request->fetchAll();
     }
 
 }
